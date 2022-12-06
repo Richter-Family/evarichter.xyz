@@ -30,8 +30,8 @@ twitter_username: michaelsrichter
 github_username:  michaelsrichter
 
 # Build settings
-# remote_theme: YoussefRaafatNasry/portfolYOU
-theme: portfolyou-jekyll-theme
+remote_theme: YoussefRaafatNasry/portfolYOU
+# theme: portfolyou-jekyll-theme
 
 plugins:
   - jemoji
