@@ -30,78 +30,85 @@ twitter_username: michaelsrichter
 github_username:  michaelsrichter
 
 # Build settings
-remote_theme: SdtElectronics/jekyll-theme-antarctica
-#theme: minima
+# remote_theme: YoussefRaafatNasry/portfolYOU
+theme: portfolyou-jekyll-theme
 
-template:
-# date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-  date_format: "%b %d, %Y"
-  widgets: colophon comment global_cmt post_meta share related_sites table_of_content
-  portfolios: projects gallery
-  propIcons:
-    pinned: "&#x1f4cc;&#xFE0E;"
+plugins:
+  - jemoji
 
-# If you want to generate website sitemap, you can set true
-# sitemap: false
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+  - documentation/partials/**                           # For Documentation Only
 
-# Valine Comments
-valine:
-  appId: "GoHOdR14a6Qubobq68emQ8n2-MdYXbMMI"
-  appKey: "SCxcdTzApt8RXJVrtqsDXay0"
-  serverURLs: https://gohodr14.api.lncldglobal.com
 
-collections_dir: collections
+### Author Info ###
+author:
+  name              : Eva Richter
+  image             : Eva.JPG
+#  behance           : your_username
+# dribbble          : your_username
+  email             : mike@elfhome.com
+#  facebook          : your_username
+#  github            : your_username
+# gitlab            : your_username
+# instagram         : your_username
+# kaggle            : your_username
+#  linkedin          : your_username
+#  medium            : your_username
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+#  twitter           : your_username
+# vimeo             : your_username
+# youtube           : your_channel_name
+# keybase           : your_username
+
+
+### Posts ###
+permalink: /blog/:title
+
+
+### Collections ###
 collections:
   projects:
     output: true
-  gallery:
-    output: true
-  
-projects_categories: 
-  - Hardware
-  - Software
+    permalink: /projects/:name
+  elements:                                             # For Documentation Only
+    output: true                                        # For Documentation Only
 
-related_sites:
-  Jekyll | Static site generator: https://jekyllrb.com
-  Source Repo | Theme antarctica: https://github.com/SdtElectronics/jekyll-theme-antarctica
-  My Homepage | SdtElectronics: https://sdtelectronics.github.io/
+### Analytics ###
+analytics:
+  enabled: false                                        # Set true to enable analytics
+  google:
+    tracking_id: your-google-tracking-id
 
+### Defaults for collections ###
 defaults:
   - scope:
       path: ""
-      type: "pages"
+      type: "projects"
     values:
-      avatar: "assets/img/a-default.png"
+      layout: "page"
+  - scope:                                              # For Documentation Only
+      path: ""                                          # For Documentation Only
+      type: "elements"                                  # For Documentation Only
+    values:                                             # For Documentation Only
+      layout: "element"                                 # For Documentation Only
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
 
-# Build settings
-highlighter: rouge
-markdown: kramdown
-kmarkdown:
-  input: GFM
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
