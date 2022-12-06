@@ -30,7 +30,7 @@ twitter_username: michaelsrichter
 github_username:  michaelsrichter
 
 # Build settings
-remote_theme:SdtElectronics/jekyll-theme-antarctica
+remote_theme: SdtElectronics/jekyll-theme-antarctica
 #theme: minima
 plugins:
   - jekyll-feed
