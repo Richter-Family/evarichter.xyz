@@ -25,12 +25,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/evarichter.xyz/" # the subpath of your site, e.g. /blog
-url: "http://michaelsrichter.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "www.evarichter.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: michaelsrichter
 github_username:  michaelsrichter
 
 # Build settings
-remote_them:SdtElectronics/jekyll-theme-antarctica
+remote_theme:SdtElectronics/jekyll-theme-antarctica
 #theme: minima
 plugins:
   - jekyll-feed
